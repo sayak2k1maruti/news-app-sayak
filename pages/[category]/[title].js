@@ -51,12 +51,16 @@ export const getServerSideProps = async ({ params }) => {
         publishedAt: "2021-12-29T20:41:00Z",
         content: "content"
     }
+    const { category, title } = params
     try {
-        const { category, title } = params
-        const rawData = await fetch(encodeURI(`https://newsapi.org/v2/everything?apiKey=${process.env.NEWS_API}&q=${title}`))
+        const rawData = await fetch(`https://newsapi.org/v2/everything?` + new URLSearchParams({
+            apiKey : process.env.NEWS_API,
+            q : title.split('-')[0].toString()
+        }) )
         const data = await rawData.json()
         const rawMoreNews = await fetch(`https://newsapi.org/v2/top-headlines?country=in&apiKey=${process.env.NEWS_API}&page=1&pageSize=${process.env.PAGE_SIZE}&category=${category}`)
         const moreNews = await rawMoreNews.json()
+        
         return {
             props: {
                 category: category,
