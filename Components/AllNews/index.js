@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Fragment, useContext } from 'react'
 import InfiniteScroll from "react-infinite-scroll-component"
 import NewsCard from './NewsCard'
-import Styles from "../../Styles/NewsContainer.module.css"
+import Styles from "../../styles/NewsContainer.module.css"
 import CardSpinner from './CardSpinner'
 import CardSkeleton from './CardSkeleton'
 import { Loader } from "../../Contexts/LoaderContextProvider"

@@ -3,7 +3,7 @@ import Stack from '@mui/material/Stack';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { CardActionArea } from '@mui/material';
-import Styles from "../../Styles/NewsContainer.module.css"
+import Styles from "../../styles/NewsContainer.module.css"
 
 const skeleton = (
     <Card sx={{

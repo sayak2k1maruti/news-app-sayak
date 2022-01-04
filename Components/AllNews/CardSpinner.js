@@ -1,4 +1,4 @@
-import Styles from "../../Styles/CardSpinner.module.css"
+import Styles from "../../styles/CardSpinner.module.css"
 import CircularProgress from '@mui/material/CircularProgress'
 
 const CardSpinner = () => {
