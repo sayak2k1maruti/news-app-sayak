@@ -1,4 +1,3 @@
 module.exports = {
-  target: 'server' ,
-  reactStrictMode: true,
+  reactStrictMode: true
 }
