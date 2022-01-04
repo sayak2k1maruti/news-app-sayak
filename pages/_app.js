@@ -1,3 +1,4 @@
+import '../styles/Global.css'
 import NewsCategoryProvider from "../Contexts/NewsCategoryProvider"
 import LoaderContextProvider from "../Contexts/LoaderContextProvider"
 import SearchQueueProvider from "../Contexts/SearchQueueProvider"

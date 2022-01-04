@@ -6,6 +6,7 @@ import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import { createTheme, ThemeProvider } from '@mui/material';
 import ToogleThemeSwitch from './ToogleThemeSwitch';
+import Link from 'next/link';
 
 const theme = createTheme({
     palette: {
@@ -27,9 +28,11 @@ const NavbarFlipBoard = () => {
     const [extendedSearch, setExtendedSearch] = useState(false)
     return (
         <div className={Styles.nabvar} >
-            <div className={extendedSearch ? [Styles.logo,Styles.logo_min].join(' ') : Styles.logo}>
-                <Logo />
-            </div>
+            <Link href={"/"}>
+                <div className={extendedSearch ? [Styles.logo, Styles.logo_min].join(' ') : Styles.logo}>
+                    <Logo />
+                </div>
+            </Link>
             <div className={Styles.right}>
                 <div className={Styles.newsletters} onClick={notAvailable} style={{
                     '--font-color-secondary': '#555',
@@ -38,7 +41,7 @@ const NavbarFlipBoard = () => {
                 <NavbarSearch open={extendedSearch} setOpen={setExtendedSearch} />
                 {!extendedSearch && <ThemeProvider theme={theme}>
                     <Stack spacing={2} direction="row">
-                        <ToogleThemeSwitch/>
+                        <ToogleThemeSwitch />
                         <span className={Styles.signInUp}>
                             <Button variant="contained" onClick={notAvailable} disableElevation>Sign up</Button>
                             <Button variant="text" onClick={notAvailable} color='grey' >Log in</Button>
@@ -52,6 +55,6 @@ const NavbarFlipBoard = () => {
 
 export default NavbarFlipBoard
 
-const notAvailable = ()=>{
+const notAvailable = () => {
     alert("This Features is not available Yet!\nUnder Development\nSorry")
 }
