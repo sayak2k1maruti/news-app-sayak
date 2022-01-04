@@ -6,7 +6,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import { NewsCatagory } from "../../Contexts/NewsCategoryProvider"
-import Styles from "../../Styles/NewsCard.module.css"
+import Styles from "../../styles/NewsCard.module.css"
 import { SearchQueueContext } from "../../Contexts/SearchQueueProvider"
 
 const NewsCard = ({ news, key }) => {

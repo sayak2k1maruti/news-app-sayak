@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { NewsCatagory } from '../../Contexts/NewsCategoryProvider'
-import Styles from '../../Styles/NavNewsBar.module.css'
+import Styles from '../../styles/NavNewsBar.module.css'
 import newsCatagories from '../../Assets/newsCatagories'
 import Link from 'next/link'
 import { Loader } from "../../Contexts/LoaderContextProvider"

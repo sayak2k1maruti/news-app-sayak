@@ -2,7 +2,7 @@ import newsCatagories from "../../Assets/newsCatagories"
 import { useContext, useEffect } from 'react'
 import AllNews from '../../Components/AllNews'
 import {ThemeContext} from "../../Contexts/ThemeContextProvider"
-import Styles from '../../Styles/Main.module.css'
+import Styles from '../../styles/Main.module.css'
 import {NewsCatagory} from '../../Contexts/NewsCategoryProvider'
 import { Loader } from "../../Contexts/LoaderContextProvider"
 

@@ -3,7 +3,7 @@ import { NewsCatagory } from '../../Contexts/NewsCategoryProvider'
 import newsCatagories from '../../Assets/newsCatagories'
 import UnfoldMoreIcon from '@mui/icons-material/UnfoldMore';
 import UnfoldLessIcon from '@mui/icons-material/UnfoldLess';
-import Styles from '../../Styles/NavNewsBar.module.css'
+import Styles from '../../styles/NavNewsBar.module.css'
 import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
 import Collapse from '@mui/material/Collapse';

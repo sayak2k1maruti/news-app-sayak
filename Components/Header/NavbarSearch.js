@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import Styles from '../../Styles/NavbarFlipBoard.module.css'
+import Styles from '../../styles/NavbarFlipBoard.module.css'
 import SearchIcon from '@mui/icons-material/Search';
 import CloseIcon from '@mui/icons-material/Close';
 import { IconButton } from '@mui/material';

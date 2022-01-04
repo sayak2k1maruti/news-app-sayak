@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Styles from '../../Styles/NavbarFlipBoard.module.css'
+import Styles from '../../styles/NavbarFlipBoard.module.css'
 import Logo from '../../Assets/Logo'
 import NavbarSearch from './NavbarSearch'
 import Stack from '@mui/material/Stack';

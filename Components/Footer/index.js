@@ -1,4 +1,4 @@
-import Styles from '../../Styles/Footer.module.css'
+import Styles from '../../styles/Footer.module.css'
 import {ThemeContext} from '../../Contexts/ThemeContextProvider'
 import { useContext } from 'react'
 const Footer = () => {

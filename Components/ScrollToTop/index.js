@@ -1,7 +1,7 @@
 import React, { useState , useEffect} from 'react'
 import IconButton from '@mui/material/IconButton';
 import ArrowCircleUpTwoToneIcon from '@mui/icons-material/ArrowCircleUpTwoTone';
-import Styles from "../../Styles/ScrollToTop.module.css"
+import Styles from "../../styles/ScrollToTop.module.css"
 
 const ScrollToTopBtn = () => {
     const [visible, setVisible] = useState(false)

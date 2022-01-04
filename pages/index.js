@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import AllNews from '../Components/AllNews'
 import {ThemeContext} from "../Contexts/ThemeContextProvider"
-import Styles from '../Styles/Main.module.css'
+import Styles from '../styles/Main.module.css'
 
 
 

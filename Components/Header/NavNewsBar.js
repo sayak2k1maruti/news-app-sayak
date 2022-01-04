@@ -1,5 +1,5 @@
 import React from 'react'
-import Styles from '../../Styles/NavNewsBar.module.css'
+import Styles from '../../styles/NavNewsBar.module.css'
 import AllNavsLargeScreen from './AllNavsLargeScreen';
 import AllNavsSmallScreen from './AllNavsSmallScreen';
   
