@@ -17,7 +17,7 @@ const ViewNewsPage = ({ category, news, moreNews , needOffline}) => {
         if (search.query && search.query != '') {
             router.push(`/${category}/`)
         }
-    }, [search, search.query])
+    }, [search, search.query , category , router])
 
     useEffect(()=>{
         if(needOffline){
@@ -27,7 +27,7 @@ const ViewNewsPage = ({ category, news, moreNews , needOffline}) => {
                 router.push('/404')
             }
         }
-    },[needOffline])
+    },[needOffline,newsCategory])
     return (
         <main className={Styles.page} style={theme.theme}>
             <ViewNews category={category} news={newsToBeDisplay} changeNews = {setNewsToBeDisplay} moreNews={moreNews} />
