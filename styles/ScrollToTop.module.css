@@ -1,0 +1,18 @@
+.scroll_btn{
+    animation: appreance 1s ease-out 0s 1 forwards;
+}
+.scroll_btn svg{
+    transition: transform .2s ease-in-out;
+}
+.scroll_btn svg:hover{
+    transform: scale(1.2) rotate(-10deg);
+}
+
+@keyframes appreance{
+    0%{
+        transform: translateY(200px)  scale(.1);
+    }
+    100%{
+        transform: translateY(0px)  scale(1);
+    }
+}

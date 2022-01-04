@@ -1,0 +1,147 @@
+@font-face {
+    font-family: 'Fakt Pro Normal';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Fakt Pro Normal'), url('../Assets/Fonts/FaktProNormal.woff') format('woff');
+}
+
+.nabvar {
+    width: 100%;
+    height: 60px;
+    padding: 0 16px 0 0;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    grid-template-rows: 60px;
+    grid-gap: 12px;
+    background-color: var(--color--bg--header);
+    border-bottom: 1px solid var(--color--divider-primary);
+    z-index: 2800;
+    grid-template-columns: auto auto;
+    top: 0;
+    font-family: 'Segoe UI,sans-serif';
+    left: 0;
+}
+.newsletters{
+    font-family: 'Fakt Pro Normal' ;
+    font-size: 13px;
+    color: var(--color--font--caption--secondary);
+    font-weight: 600;
+    white-space: nowrap;
+    transition: color .1s ease-in;
+    padding: 10px;
+    cursor: pointer;
+    margin-right: 25px ;
+    --streach : 1.2;
+    -webkit-transform:scale(var(--streach),1); /* Safari and Chrome */
+    -moz-transform:scale(var(--streach),1); /* Firefox */
+    -ms-transform:scale(var(--streach),1); /* IE 9 */
+    -o-transform:scale(var(--streach),1); /* Opera */
+    transform:scale(var(--streach),1);
+}
+.newsletters:hover{
+    color: var(--color--font--primary);
+}
+
+.logo {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.right{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+    width: max-content;
+    margin-right: 30px;
+}
+.right > div{
+    margin-left: 5px;
+    margin-right: 20px;
+}
+
+.searchBox{
+    height: 60%;
+    width: 18vw;
+    background: var(--color--bg--search);
+    border-radius: 5px;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+}
+.extended{
+    animation: extendWidth 1s ease-in-out 0.1s 1 forwards;
+}
+.searchBox:hover{
+    opacity: 1;
+}
+.searchBox > input{
+    width: inherit;
+    font-family: 'Fakt Pro Normal' ;
+    outline: none;
+    border: none;
+    background: transparent;
+    color: var(--color--font--primary);
+    font-size: large;
+    height: inherit;
+}
+.searchBox > input:focus,
+.searchBox > input:active{
+    outline: none;
+    border: none;
+}
+
+
+
+@media only screen and (max-width: 1080px){
+    .searchBox{
+        width: 40px;
+        overflow-x: hidden;
+        background: transparent;
+    }
+}
+@media only screen and (max-width : 720px) {
+    .signInUp{
+        display: none;
+    }    
+    .right{
+        margin-right: 5px;
+    }
+    .right > div{
+        margin-right: 0px;
+    }
+    .newsletters{
+        display: none;
+    }
+    .logo_min{
+        display: none;
+    }
+    .logo{
+        width: 25vw;
+    }
+
+    .extended{
+        animation: extendWidthSm 1s ease-in-out 0.1s 1 forwards;
+    }
+}
+
+
+@keyframes extendWidth{
+    0%{
+        width : 18vw;
+    }100%{
+        width: 50vw;
+    }
+}
+@keyframes extendWidthSm{
+    0%{
+        width : 18vw;
+    }100%{
+        width: 98vw;
+        background-color: var(--color--bg--search);
+    }
+}

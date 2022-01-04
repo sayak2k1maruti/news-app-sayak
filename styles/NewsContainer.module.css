@@ -1,0 +1,23 @@
+.newsContainer{
+    display: flex;
+    width: 100vw;
+    height: auto;
+    overflow: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.end{
+    text-align: center;
+    width: 100vw;
+    margin-top: 50px;
+    overflow-x: hidden;
+    font-size: 9vw;
+    color: var(--color--divider-secondary);    
+}
+.end::after{
+    display: block;
+    font-size: 8vw;
+    content: "@sayak";
+}

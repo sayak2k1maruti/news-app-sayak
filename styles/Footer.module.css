@@ -1,0 +1,20 @@
+.footer{
+    width: 100vw;
+    min-height: 250px;
+    height: max-content;
+    font-size: x-large;
+    color: var(--color--font--footer);
+    background-color: var(--color--bg--footer);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+}
+.footer a{
+    text-decoration: underline;
+    color: inherit;
+}
+.footer a:hover{
+    text-decoration: none;
+}

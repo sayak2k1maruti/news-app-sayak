@@ -10,7 +10,13 @@
   "dependencies": {
     "next": "12.0.7",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "@emotion/react": "^11.7.0",
+    "@emotion/styled": "^11.6.0",
+    "@mui/icons-material": "^5.2.0",
+    "@mui/material": "^5.2.2",
+    "react-infinite-scroll-component": "^6.1.0",
+    "react-top-loading-bar": "^2.1.0"
   },
   "devDependencies": {
     "eslint": "8.5.0",
