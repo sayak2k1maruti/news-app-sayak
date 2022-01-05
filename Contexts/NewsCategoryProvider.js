@@ -5,7 +5,6 @@ const NewsCategoryProvider = (props) => {
     const [newsCategory, setNewsCategory] = useState("general")
     const [offLineNews , setOffLineNews] = useState(null)
     const changeNewsCategory = (category) => {
-        console.log(category)
         setNewsCategory(category)
     }
     return (

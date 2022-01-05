@@ -8,13 +8,15 @@ import { CardActionArea } from '@mui/material';
 import { NewsCatagory } from "../../Contexts/NewsCategoryProvider"
 import Styles from "../../styles/NewsCard.module.css"
 import { SearchQueueContext } from "../../Contexts/SearchQueueProvider"
+import {Loader} from '../../Contexts/LoaderContextProvider'
 
 const NewsCard = ({ news, key }) => {
     const newsCategory = useContext(NewsCatagory)
     const search = useContext(SearchQueueContext)
+    const loader = useContext(Loader)
     return (
         <Link href={`/${newsCategory.activeCategory}/${news.title}`}>
-            <Card onClick={() => { newsCategory.setOffLineNews(news); search.setQuery(null) }}
+            <Card onClick={() => { newsCategory.setOffLineNews(news); loader.current.continuousStart() ; search.setQuery(null) }}
                 key={key}
                 className={Styles.card}
                 component={"span"}

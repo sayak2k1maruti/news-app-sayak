@@ -34,13 +34,11 @@ const ALlNews = ({ category, allNews }) => {
             // Make a new timeout set to go off in 1000ms (1 second)
             //To reduce unnecessary requests
             timeout = setTimeout(async () => {
-                console.log("successfull")
                 try {
                     const res = await fetch(`${baseUrl}?` + new URLSearchParams({
                         page: 1
                     }))
                     const data = await res.json()
-                    console.log(res)
                     setIsLoaded(true)
                     setNews(data.articles)
                     loader.current.complete()

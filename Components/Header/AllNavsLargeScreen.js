@@ -15,14 +15,14 @@ const AllNavsLargeScreen = () => {
             {
                 newsCatagories.map((item, key) => (
                     (item !== activeCategory) ?
-                        <Link href={`/${item}`} key={key}>
-                            <span className={[Styles.normal, Styles.navItems].join(' ')}>
+                        <Link href={`/${item}`} key={key} >
+                            <span className={[Styles.normal, Styles.navItems].join(' ')} onClick={()=>{loader.current.continuousStart()}}>
                                 {item}
                             </span>
                         </Link>
                         :
                         <Link href={`/${item}`} key={key} >
-                            <span className={[Styles.active, Styles.navItems].join(' ')} onClick={()=>{console.log("Clicked") }}>
+                            <span className={[Styles.active, Styles.navItems].join(' ')} onClick={()=>{loader.current.continuousStart()}}>
                                 {item}
                             </span>
                         </Link>

@@ -5,6 +5,7 @@ import { SearchQueueContext } from "../../Contexts/SearchQueueProvider"
 import ViewNews from "../../Components/ViewNews";
 import { ThemeContext } from "../../Contexts/ThemeContextProvider"
 import { NewsCatagory } from "../../Contexts/NewsCategoryProvider"
+import { Loader } from "../../Contexts/LoaderContextProvider";
 
 const ViewNewsPage = ({ category, news, moreNews, needOffline }) => {
     const search = useContext(SearchQueueContext)
@@ -12,6 +13,8 @@ const ViewNewsPage = ({ category, news, moreNews, needOffline }) => {
     const theme = useContext(ThemeContext)
     const newsCategory = useContext(NewsCatagory)
     const [newsToBeDisplay, setNewsToBeDisplay] = useState(news)
+    const loader = useContext(Loader)
+
 
     useEffect(() => {
         if (search.query && search.query != '') {
@@ -28,6 +31,11 @@ const ViewNewsPage = ({ category, news, moreNews, needOffline }) => {
             }
         }
     }, [needOffline, newsCategory])
+    
+    useEffect(()=>{
+        loader.current.complete()
+    },[loader])
+    
     return (
         <main className={Styles.page} style={theme.theme}>
             <ViewNews category={category} news={newsToBeDisplay} changeNews={setNewsToBeDisplay} moreNews={moreNews} />

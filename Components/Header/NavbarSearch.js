@@ -10,7 +10,6 @@ const NavbarSearch = ({open,setOpen}) => {
     const searchContext = useContext(SearchQueueContext)
     const onChange = (e) => {
         searchContext.setQuery(e.target.value)
-        console.log(e.target.value)
     }
     return (
         <>
